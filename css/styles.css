@@ -10,9 +10,12 @@
     --white: #fff;
     --border-color-upp: #f9c5c5;
     --border-second: #bcd0e5;
-    --border-hover: #78c6fa;
+    --btn-border-header: #78c6fa;
+    --btn-back-header: #175656;
+    --btn-text-header: #e3e3ea;
+    --btn-upp-text-header: #121220;
     --logo: #173a56;
-    --button-bg: #02897a;
+    --btn-bg-header: #02897a;
     --button-bg-color: #5ec0b4;
     --link-active: #38f7f4;
     --symbol: #4d8dff;
@@ -22,6 +25,9 @@
     --hover-logo: #669fbc;
     --hover-nav: #0b5a7f;
     --border-news: #dedede;
+    --ellipse: #edfffc;
+    --ellipse-focus: #9fcec6;
+    --elipse-stroke: #0a8b7c70;
 }
 
 *,
@@ -42,10 +48,13 @@ ul {
 }
 
 img {
+    width: 100%;
+    object-fit: cover;
     display: block;
 }
 
 button {
+    padding: 0;
     cursor: pointer;
     display: block;
 }
@@ -69,16 +78,13 @@ body {
 
 .section {
     min-width: 320px;
-    /* max-width: 1400px; */
     margin: 0 auto;
 }
 
 .container {
-    /* max-width: 1140px; */
     max-width: 320px;
     margin: 0 auto;
-    /* padding: 0 20px; */
-    padding: 0 44px;
+    padding: 0 20px;
 }
 
 /* #region senior */
@@ -510,7 +516,7 @@ h1 {
 
 
 /* #region pricing */
-.pricing {
+/* .pricing {
     padding-bottom: 100px;
     padding-top: 61px;
 }
@@ -660,6 +666,6 @@ h1 {
 
 .gre {
     color: #fff;
-}
+} */
 
 /* #endregion pricing */
