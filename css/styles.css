@@ -25,6 +25,9 @@
     --hover-logo: #669fbc;
     --hover-nav: #0b5a7f;
     --border-news: #dedede;
+    --ellipse: #edfffc;
+    --ellipse-focus: #9fcec6;
+    --elipse-stroke: #0a8b7c70;
 }
 
 *,
@@ -81,7 +84,7 @@ body {
 .container {
     max-width: 320px;
     margin: 0 auto;
-    padding: 0 44px;
+    padding: 0 20px;
 }
 
 .senior {
@@ -143,6 +146,14 @@ body {
         font-size: 16px;
         line-height: 1.75;
         color: var(--text);
+        transition: color 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .product-link {
+        font-weight: 600;
+    }
+    .midl-nav-list-link:active,
+    .midl-nav-list-link:focus {
+        color: var(--hover-nav);
     }
 }
 .midl-register {
@@ -177,7 +188,7 @@ body {
         background-color: var(--btn-back-header);
         border-color: var(--btn-border-header);
     }
-        .upp {
+    .upp {
         border: none;
         min-width: 112px;
         padding: 9px 24px;
@@ -192,15 +203,80 @@ body {
             background-color 1s cubic-bezier(0.4, 0, 0.2, 1),
             border-color 1s cubic-bezier(0.4, 0, 0.2, 1);
     }
-        .upp:focus,
-        .upp:active {
-            color: var(--btn-upp-text-header);
-            background-color: var(--button-bg-color);
-            border-color: var(--border-color-upp);
-        }
+    .upp:focus,
+    .upp:active {
+        color: var(--btn-upp-text-header);
+        background-color: var(--button-bg-color);
+        border-color: var(--border-color-upp);
+    }
 }
 
-.burger {
+/* #region burger-button */
+.midl-input {
+    appearance: none;
+    display: block;
+}
+.midl-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    width: 28px;
+    height: 31px;
+}
+.burger-icon {
+    position: relative;
+}
+.burger-icon,
+.burger-icon::after,
+.burger-icon::before {
+    width: 24px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: var(--logo);
+    transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.burger-icon::after,
+.burger-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+}
+.burger-icon::after {
+    top: -7.75px;
+}
+.burger-icon::before {
+    top: 7.75px;
+}
+.midl-label:focus .burger-icon::after,
+.midl-label:active .burger-icon::after {
+    top: -10px;
+}
+.midl-label:focus .burger-icon::before,
+.midl-label:active .burger-icon::before {
+    top: 10px;
+}
+.midl-input:checked + .midl-label .burger-icon {
+    background-color: transparent;
+}
+.midl-input:checked + .midl-label .burger-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+.midl-input:checked + .midl-label .burger-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+/* #endregion burger-button */
+@media screen and (min-width: 768px) {
+    .midl-box {
+        display: none;
+    }
+}
+
+/* .burger {
     border: none;
     width: 28px;
     height: 31px;
@@ -218,4 +294,135 @@ body {
 .icon-burger:focus,
 .icon-burger:active {
     stroke: var(--hover-logo);
+} */
+
+
+/* #region modal-menu */
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(77, 134, 116, 0.5);
+
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.modal-window {
+    background-color: var(--white);
+    margin: 0 auto;
+    padding: 72px 20px 24px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.modal-nav-link {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: var(--text);
+}
+.modal-link {
+    font-weight: 700;
+}
+
+.modal-inn {
+    margin: 0 auto 20px;
+    border: none;
+    min-width: 200px;
+    padding: 9px 24px;
+    border: 1px solid var(--border-second);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--logo);
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 1s cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 1s cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-inn:focus,
+.modal-inn:active {
+    color: var(--btn-text-header);
+    background-color: var(--btn-back-header);
+    border-color: var(--btn-border-header);
+}
+.modal-upp {
+    border: none;
+    margin: 0 auto 70px;
+    border-radius: 4px;
+    min-width: 200px;
+    background-color: var(--btn-bg-header);
+    padding: 9px 24px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--white);
+    transition: color 1s cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 1s cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-upp:focus,
+.modal-upp:active {
+    color: var(--btn-upp-text-header);
+    background-color: var(--button-bg-color);
+    border-color: var(--border-color-upp);
+}
+.modal-meseger {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.modal-meseger-list {
+    width: 40px;
+    height: 40px;
+}
+.modal-meseger-list-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--ellipse);
+    transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-meseger-list-link:focus,
+.modal-meseger-list-link:active {
+    background-color: var(--ellipse-focus);
+}
+.icon-ellipse {
+    stroke: var(--btn-bg-header);
+    fill: none;
+    stroke-width: 2px;
+    transition: stroke 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-meseger-list-link:focus .icon-ellipse,
+.modal-meseger-list-link:active .icon-ellipse {
+    stroke: var(--elipse-stroke);
+}
+/* #endregion modal-menu */
+
+
