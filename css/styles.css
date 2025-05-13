@@ -258,44 +258,12 @@ body {
 .midl-label:active .burger-icon::before {
     top: 10px;
 }
-.midl-input:checked + .midl-label .burger-icon {
-    background-color: transparent;
-}
-.midl-input:checked + .midl-label .burger-icon::after {
-    transform: rotate(-45deg);
-    top: 0;
-}
-.midl-input:checked + .midl-label .burger-icon::before {
-    transform: rotate(45deg);
-    top: 0;
-}
 /* #endregion burger-button */
 @media screen and (min-width: 768px) {
     .midl-box {
         display: none;
     }
 }
-
-/* .burger {
-    border: none;
-    width: 28px;
-    height: 31px;
-    background-color: transparent;
-}
-@media screen and (min-width: 768px) {
-    .burger {
-        display: none;
-    }
-}
-.icon-burger {
-    stroke: var(--logo);
-    transition: stroke 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.icon-burger:focus,
-.icon-burger:active {
-    stroke: var(--hover-logo);
-} */
-
 
 /* #region modal-menu */
 .modal {
@@ -321,6 +289,7 @@ body {
     pointer-events: auto;
 }
 .modal-window {
+    max-width: 411px;
     background-color: var(--white);
     margin: 0 auto;
     padding: 72px 20px 24px;
@@ -331,6 +300,31 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: solid 1px var(--hover-nav);
+    background-color: var(--border-second);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 1s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 1s cubic-bezier(0.4, 0, 0.2, 1),
+                fill 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close:focus,
+.modal-close:active {
+    border: none;
+    background-color: var(--btn-border-header);   
+}
+.modal-close:focus .icon-close,
+.modal-close:active .icon-close {
+    fill: var(--white);
 }
 .modal-nav {
     display: flex;
@@ -424,5 +418,3 @@ body {
     stroke: var(--elipse-stroke);
 }
 /* #endregion modal-menu */
-
-
