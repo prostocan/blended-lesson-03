@@ -28,6 +28,9 @@
     --ellipse: #edfffc;
     --ellipse-focus: #9fcec6;
     --elipse-stroke: #0a8b7c70;
+    --tick1: #f90;
+    --tick2: #f03e3d;
+    --tick3: #4d8dff;
 }
 
 *,
@@ -932,3 +935,117 @@ body {
     margin-bottom: 12px;
 }
 /* #endregion management */
+
+
+/* #region support */
+.support {
+    padding-bottom: 100px;
+}
+@media screen and (min-width: 411px) {
+    .support-box {
+        max-width: 411px;
+        padding: 0 21px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .support-box {
+        max-width: 768px;
+        padding: 0 27px;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .support-box {
+        max-width: 1158px;
+        padding: 0 20px;
+        text-align: start;
+        min-height: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .support-content {
+        width: 451px;
+    }
+}
+.img-support {
+    margin-bottom: 50px;
+}
+@media screen and (min-width: 1158px) {
+    .img-support {
+        margin-bottom: 0;
+        width: 540px;
+    }
+}
+.support-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text);
+}
+.support-title-span {
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--text);
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+.support-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.63;
+    color: var(--text);
+    margin-bottom: 16px;
+}
+.support-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+@media screen and (min-width: 768px) {
+    .support-list {
+        align-items: flex-start;
+    }
+}
+@media screen and (min-width: 411px) {
+    .support-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+.support-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 35px;
+    min-height: 35px;
+    border: 2.92px solid var(--white);
+    border-radius: 14px;
+}
+@media screen and (min-width: 411px) {
+    .support-wrapper {
+        margin-right: 30px;
+    }
+}
+.tick-orange {
+    background-color: var(--tick1);
+}
+.tick-red {
+    background-color: var(--tick2);
+}
+.tick-blue {
+    background-color: var(--tick3);
+}
+.support-icon {
+    fill: var(--white);
+}
+.support-list-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.63;
+    color: var(--text);
+}
+/* #endregion support */
