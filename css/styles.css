@@ -565,7 +565,7 @@ body {
         margin-bottom: 40px;
     }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1158px) {
     .hero-text {
         margin-bottom: 45px;
         text-align: start;
@@ -684,7 +684,7 @@ body {
 @media screen and (min-width: 1158px) {
     .product {
         padding-top: 0;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 }
 @media screen and (min-width: 411px) {
@@ -736,6 +736,7 @@ body {
         justify-content: center;
         gap: 30px;
         row-gap: 0;
+        margin-bottom: 50px;
     }
 }
 .product-list-item {
@@ -840,3 +841,94 @@ body {
 }
 /* #endregion product */
 
+
+/* #region management */
+.management {
+    padding: 100px 0;
+}
+@media screen and (min-width: 1158px) {
+    .management {
+        padding-top: 0;
+    }
+}
+@media screen and (min-width: 411px) {
+    .management-box {
+        max-width: 411px;
+        padding: 0 21px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .management-box {
+        max-width: 768px;
+        padding: 0 27px;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .management-box {
+        max-width: 1158px;
+        min-height: 500px;
+        padding: 0 20px;
+        text-align: start;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .management-content {
+        width: 486px;
+    }
+}
+.img-management {
+    margin-bottom: 50px;
+}
+@media screen and (min-width: 1158px) {
+    .img-management {
+        margin-bottom: 0;
+        width: 540px;
+    }
+}
+.manag-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text);
+}
+.manag-title-span {
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--text);
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+@media screen and (min-width: 1158px) {
+    .manag-title-span {
+        margin-bottom: 25px;
+    }
+}
+.manag-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+@media screen and (min-width: 1158px) {
+    .manag-list {
+        gap: 25px;
+    }
+}
+.manag-list-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.63;
+    color: var(--text);
+}
+.manag-list-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.63;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+/* #endregion management */
