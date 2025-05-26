@@ -1009,13 +1009,12 @@ body {
         align-items: flex-start;
     }
 }
-@media screen and (min-width: 411px) {
     .support-list-item {
         display: flex;
         align-items: center;
         justify-content: flex-start;
     }
-}
+
 .support-wrapper {
     display: flex;
     justify-content: center;
@@ -1025,11 +1024,10 @@ body {
     border: 2.92px solid var(--white);
     border-radius: 14px;
 }
-@media screen and (min-width: 411px) {
     .support-wrapper {
         margin-right: 30px;
     }
-}
+
 .tick-orange {
     background-color: var(--tick1);
 }
@@ -1049,3 +1047,10 @@ body {
     color: var(--text);
 }
 /* #endregion support */
+
+
+/* #region collaborative */
+.collaborative {
+    padding-bottom: 140px;
+}
+/* #endregion collaborative */
