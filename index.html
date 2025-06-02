@@ -20,40 +20,8 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="./css/styles.css">
+        <script src="./js/script.js" defer></script>
 </head>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-            const checkbox = document.getElementById("checkbox");
-            const modal = document.getElementById("modal");
-            const closeBtn = document.querySelector(".modal-close");
-
-            // Відкриття модального вікна через чекбокс (бургер-меню)
-            checkbox.addEventListener("change", () => {
-                if (checkbox.checked) {
-                    modal.classList.add("is-open");
-                } else {
-                    modal.classList.remove("is-open");
-                }
-            });
-
-            // Закриття модального вікна через хрестик
-            closeBtn.addEventListener("click", () => {
-                modal.classList.remove("is-open");
-                checkbox.checked = false;
-            });
-
-            // Закриття при натисканні на фон
-            modal.addEventListener("click", (event) => {
-                if (!event.target.closest(".modal-window")) {
-                    modal.classList.remove("is-open");
-                    checkbox.checked = false;
-                }
-            });
-        });
-</script>
-
 
 <body>
 
@@ -580,6 +548,82 @@
                                 Pages</li>
                         </ul>
                         <button class="price-btn">Order Now</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section client">
+            <div class="container client-box">
+                <h2 class="client-title">What Clients Say</h2>
+                <p class="client-text">Problems trying to resolve the conflict between
+                the two major realms of Classical physics:
+                Newtonian mechanics</p>
+                <ul class="client-list">
+
+                    <li class="client-list-item">
+                        <svg class="client-icon" width="106.4" height="18.35">
+                          <use href="./images/icons.svg#icon-stars"></use>
+                        </svg>
+                        <p class="client-item-text">Product helps you see how many
+                        more days you need to work to  reach your financial goal.</p>
+                        <div class="client-item-wrapper">
+                            <picture class="client-picture">
+                                <source media="(max-width: 767px)" srcset="./images/designer-mob.png 1x, ./images/designer-mob@2x.png 2x">
+                                <img src="./images/designer-mob.png" alt="designer" width="50" height="50">
+                            </picture>
+                            <h3 class="client-item-title">Wahid Ari <span class="client-item-span">Designer</span></h3>
+                        </div>
+                    </li>
+
+                    <li class="client-list-item">
+                        <svg class="client-icon" width="106.4"
+                            height="18.35">
+                            <use href="./images/icons.svg#icon-stars">
+                            </use>
+                        </svg>
+                        <p class="client-item-text">Product helps you
+                            see how many
+                            more days you need to work to reach your
+                            financial goal.</p>
+                        <div class="client-item-wrapper">
+                            <picture class="client-picture">
+                                <source media="(max-width: 767px)"
+                                    srcset="./images/frontend-mob.png 1x, ./images/frontend-mob@2x.png 2x">
+                                <img src="./images/frontend-mob.png"
+                                    alt="frontend" width="50"
+                                    height="50">
+                            </picture>
+                            <h3 class="client-item-title">Wahid Ari
+                                <span
+                                    class="client-item-span">FrontEnd</span>
+                            </h3>
+                        </div>
+                    </li>
+
+                    <li class="client-list-item">
+                        <svg class="client-icon" width="106.4"
+                            height="18.35">
+                            <use href="./images/icons.svg#icon-stars">
+                            </use>
+                        </svg>
+                        <p class="client-item-text">Product helps you
+                            see how many
+                            more days you need to work to reach your
+                            financial goal.</p>
+                        <div class="client-item-wrapper">
+                            <picture class="client-picture">
+                                <source media="(max-width: 767px)"
+                                    srcset="./images/analys-mob.png 1x, ./images/analys-mob@2x.png 2x">
+                                <img src="./images/analys-mob.png"
+                                    alt="analys" width="50"
+                                    height="50">
+                            </picture>
+                            <h3 class="client-item-title">Wahid Ari
+                                <span
+                                    class="client-item-span">Analys</span>
+                            </h3>
+                        </div>
                     </li>
                 </ul>
             </div>
